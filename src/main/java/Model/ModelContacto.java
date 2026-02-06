@@ -28,14 +28,18 @@ public class ModelContacto {
         this.crud = new CRUDClients();
         this.documentacion = new Documentation();
         this.customers = documentacion.listToListCustomers(crud.read());
+        System.out.println("Le llega al contacto: " + FacadeLogin.getCurrentCustomer().toString());
         this.currentCustomer = FacadeLogin.getCurrentCustomer();
     }
     
     // Find user by username in the list
-    private Customer findUserByCedula(String cedula) {
-        System.out.println(customers.toString());
+    public Customer findUserByCedula(String cedula) {
+        System.out.println("busqueda osbre: " + customers.toString());
         for (Customer user : customers) {
+            System.out.println("cedula buscada : " + cedula);
+            System.out.println("buscando en: " + user.toString());
             if (cedula.equals(user.getCedula())) {
+                System.out.println("encontro a : " + user.toString());
                 benefited = user;
                 return user;
             }
@@ -44,6 +48,7 @@ public class ModelContacto {
     }
 
     public static Customer getBenefited() {
+        
         return benefited;
     }
     

@@ -48,7 +48,6 @@ public class ViewContacto extends javax.swing.JFrame {
         btnContinue = new javax.swing.JButton();
         lblErrors = new javax.swing.JLabel();
         btnExit = new javax.swing.JButton();
-        lblErrorCuenta = new javax.swing.JLabel();
         btnValidate = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -72,11 +71,11 @@ public class ViewContacto extends javax.swing.JFrame {
         btnContinue.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnContinue.setEnabled(false);
         btnContinue.setFocusPainted(false);
-        jPanel1.add(btnContinue, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 790, 350, 60));
+        jPanel1.add(btnContinue, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, 350, 60));
 
         lblErrors.setForeground(new java.awt.Color(255, 158, 0));
         lblErrors.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jPanel1.add(lblErrors, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 350, 20));
+        jPanel1.add(lblErrors, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 350, 20));
 
         btnExit.setBackground(new java.awt.Color(10, 107, 207));
         btnExit.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -87,9 +86,6 @@ public class ViewContacto extends javax.swing.JFrame {
         btnExit.setFocusable(false);
         btnExit.setPreferredSize(new java.awt.Dimension(45, 45));
         jPanel1.add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 40, 40));
-
-        lblErrorCuenta.setText("jLabel2");
-        jPanel1.add(lblErrorCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 320, -1));
 
         btnValidate.setBackground(new java.awt.Color(10, 107, 207));
         btnValidate.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -123,7 +119,6 @@ public class ViewContacto extends javax.swing.JFrame {
     private javax.swing.JButton btnValidate;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel lblErrorCuenta;
     private javax.swing.JLabel lblErrors;
     private javax.swing.JTextField txfCedula;
     // End of variables declaration//GEN-END:variables

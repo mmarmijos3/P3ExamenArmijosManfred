@@ -39,9 +39,7 @@ public class ControllerContact {
     }
     
     private void confirm(){
-        if(validBenefiet()){
-            MainController.showTransfer();
-        }
+        MainController.showTransfer();
     }
 
     
@@ -50,10 +48,14 @@ public class ControllerContact {
 //    }
     
     private boolean validBenefiet(){
+        model.findUserByCedula(view.getCedula());
         if(ModelContacto.getBenefited() != null){
             view.showErrors(ModelContacto.getBenefited().getName());
+            System.out.println(ModelContacto.getBenefited().getName());
             return  true;
         }
+        view.showErrors("NO encontrado");
+        
         return false;
     }  
 }

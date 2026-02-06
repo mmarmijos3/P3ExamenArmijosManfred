@@ -38,7 +38,6 @@ public class FacadeLogin {
     
     // Find user by username in the list
     private Customer findUserByUsername(String username) {
-        System.out.println(customers.toString());
         for (Customer user : customers) {
             if (username.equals(user.getUsername())) {
                 currentCustomer = user;
