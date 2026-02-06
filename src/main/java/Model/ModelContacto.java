@@ -48,8 +48,10 @@ public class ModelContacto {
     }
 
     public static Customer getBenefited() {
-        
         return benefited;
+    }
+    public static void resetBenefited() {
+        benefited = null;
     }
     
 }

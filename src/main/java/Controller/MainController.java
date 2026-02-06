@@ -3,6 +3,7 @@ package Controller;
 
 import Model.FacadeRegistration;
 import Model.ModelContacto;
+import Model.ModelTransfer;
 import Model.Mongo.CRUDClients;
 import Model.Mongo.Documentation;
 import View.*;
@@ -48,7 +49,7 @@ public class MainController {
     public static void showTransfer(){
         if (viewTransferencia == null){
             viewTransferencia = new ViewTransferencia();
-            new ControllerCR(viewCR, new FacadeRegistration(new CRUDClients(), new Documentation())).iniciar();
+            new ControllerTransfer(viewTransferencia, new ModelTransfer()).iniciar();
         }
         viewTransferencia.setVisible(true);
     }

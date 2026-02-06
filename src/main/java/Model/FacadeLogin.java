@@ -34,7 +34,10 @@ public class FacadeLogin {
     public static Customer getCurrentCustomer() {
         return currentCustomer;
     }
-
+    
+    public static void resetCurrentCustomer() {
+        currentCustomer = null;
+    }
     
     // Find user by username in the list
     private Customer findUserByUsername(String username) {

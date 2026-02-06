@@ -43,9 +43,11 @@ public class Customer implements Operations{
     }
 
     @Override
-    public void transfer(Customer customer, double amount) {
-        withdraw(amount);
-        customer.deposit(amount);
+    public void transfer(Customer benefited, double amount) {
+        if(amount <= getFunds()){
+            withdraw(amount);
+            benefited.deposit(amount);
+        } 
     }
 
     @Override

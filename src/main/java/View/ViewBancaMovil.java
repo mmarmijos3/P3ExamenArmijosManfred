@@ -9,7 +9,7 @@ public class ViewBancaMovil extends javax.swing.JFrame {
      */
     public ViewBancaMovil() {
         initComponents();
-        //setUndecorated(true);
+        setUndecorated(true);
         setLocationRelativeTo(null);
     }
     
@@ -78,7 +78,7 @@ public class ViewBancaMovil extends javax.swing.JFrame {
         btnLogin.setContentAreaFilled(false);
         btnLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLogin.setFocusPainted(false);
-        jPanel1.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 350, 60));
+        jPanel1.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 790, 350, 60));
 
         lblErrors.setForeground(new java.awt.Color(255, 158, 0));
         lblErrors.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

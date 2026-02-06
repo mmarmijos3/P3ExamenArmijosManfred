@@ -14,11 +14,5 @@ public class BancoPichincha {
 
     public static void main(String[] args) {
         MainController.showLogin();
-//        new ControllerCR(
-//            new ViewCustomerRegistration(),
-//            new CustomerRegistration(
-//                new CRUDClients(),
-//                new Documentation())
-//        ).iniciar();
     }
 }

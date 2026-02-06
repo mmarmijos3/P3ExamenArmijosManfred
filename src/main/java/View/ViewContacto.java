@@ -71,7 +71,7 @@ public class ViewContacto extends javax.swing.JFrame {
         btnContinue.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnContinue.setEnabled(false);
         btnContinue.setFocusPainted(false);
-        jPanel1.add(btnContinue, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, 350, 60));
+        jPanel1.add(btnContinue, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 790, 350, 60));
 
         lblErrors.setForeground(new java.awt.Color(255, 158, 0));
         lblErrors.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

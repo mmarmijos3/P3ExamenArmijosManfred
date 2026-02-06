@@ -36,7 +36,8 @@ public class ControllerCR {
     }
 
     private void cerrar() {
-        System.exit(0);
+        MainController.showLogin();
+        view.setVisible(false);
     }
     
     

@@ -28,7 +28,8 @@ public class ControllerContact {
     }
 
     private void cerrar() {
-        System.exit(0);
+        MainController.showLogin();
+        view.setVisible(false);
     }
     
     
@@ -40,6 +41,7 @@ public class ControllerContact {
     
     private void confirm(){
         MainController.showTransfer();
+        view.setVisible(false);
     }
 
     
