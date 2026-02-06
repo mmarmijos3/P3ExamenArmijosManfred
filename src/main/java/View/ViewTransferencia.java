@@ -19,7 +19,7 @@ public class ViewTransferencia extends javax.swing.JFrame {
     
     public void showBenefitName(String name){
         lblNameBenefit.setText(name);
-        lblFLNB.setText(name.substring(0, 0));
+        lblFLNB.setText(name.substring(0, 1));
     }
    
     public void showFunds(String funds){
