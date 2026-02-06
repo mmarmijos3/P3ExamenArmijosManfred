@@ -12,29 +12,36 @@ import java.util.List;
 /**
  * Handles user login validation logic
  */
-public class ModelLogin {
+public class FacadeLogin {
     // List of users for authentication
     private final List<Customer> customers;
     private OperationsCRUD crud;
     private Documentation documentacion;
+    private static Customer currentCustomer;
 
     // Constructor with custom user list
-    public ModelLogin(List<Customer> customers) {
+    public FacadeLogin(List<Customer> customers) {
         this.customers = customers;
     }
     
     // Default constructor uses predefined users
-    public ModelLogin() {
+    public FacadeLogin() {
         this.crud = new CRUDClients();
         this.documentacion = new Documentation();
         this.customers = documentacion.listToListCustomers(crud.read());
     }
+
+    public static Customer getCurrentCustomer() {
+        return currentCustomer;
+    }
+
     
     // Find user by username in the list
     private Customer findUserByUsername(String username) {
         System.out.println(customers.toString());
         for (Customer user : customers) {
             if (username.equals(user.getUsername())) {
+                currentCustomer = user;
                 return user;
             }
         }

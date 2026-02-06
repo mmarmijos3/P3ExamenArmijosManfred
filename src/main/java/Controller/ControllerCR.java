@@ -1,6 +1,6 @@
 package Controller;
 
-import Model.CustomerRegistration;
+import Model.FacadeRegistration;
 import View.ViewCustomerRegistration;
 
 /**
@@ -9,9 +9,9 @@ import View.ViewCustomerRegistration;
  */
 public class ControllerCR {
     private ViewCustomerRegistration view;
-    private CustomerRegistration model;
+    private FacadeRegistration model;
 
-    public ControllerCR(ViewCustomerRegistration view, CustomerRegistration model) {
+    public ControllerCR(ViewCustomerRegistration view, FacadeRegistration model) {
         this.view = view;
         this.model = model;
         prepareButtons();
@@ -158,7 +158,7 @@ public class ControllerCR {
     private boolean isFormValid(){
         return (
                 validateName()& 
-                validateCedula()&
+                validateUniqueCedula()&
                 validateEmail()&
                 validatePhone()&
                 validateFunds()
@@ -181,8 +181,8 @@ public class ControllerCR {
         if(!validateCedula()){
             return false;
         }
-        if(isCedulaChange()&& isCedulaRegistered(view.getNameForm())){
-            view.showlErrorName("Cliente ya registrado");
+        if(isCedulaChange()&& isCedulaRegistered(view.getCedulaForm())){
+            view.showlErrorCedula("Cliente ya registrado");
             return false;
         }
         

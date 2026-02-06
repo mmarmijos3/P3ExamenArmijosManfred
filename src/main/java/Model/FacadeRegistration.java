@@ -7,13 +7,13 @@ import Model.Mongo.OperationsCRUD;
 import java.util.List;
 import org.bson.Document;
 
-public class CustomerRegistration {
+public class FacadeRegistration {
     
     private OperationsCRUD crud;
     private Documentation documentacion;
 
 
-    public CustomerRegistration(OperationsCRUD crud, Documentation documentacion) {
+    public FacadeRegistration(OperationsCRUD crud, Documentation documentacion) {
         this.crud = crud;
         this.documentacion = documentacion;
     }
@@ -52,8 +52,8 @@ public class CustomerRegistration {
         return documentacion.listToCustomers(crud.read());
     }
     
-    public List<Object[]> searchCustomer(String nombre){
-        return documentacion.listToCustomers(crud.find(nombre));
+    public List<Object[]> searchCustomer(String cedula){
+        return documentacion.listToCustomers(crud.find(cedula));
     }
     
     public void deleteCustomer(String nombre){

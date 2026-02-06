@@ -1,16 +1,16 @@
 
 package Controller;
 
-import Model.ModelLogin;
+import Model.FacadeLogin;
 import View.ViewBancaMovil;
 
 public class ControllerLogin {
     private ViewBancaMovil viewLogin;
-    private ModelLogin modelLogin;
+    private FacadeLogin modelLogin;
 
     public ControllerLogin(ViewBancaMovil viewLogin) {
         this.viewLogin = viewLogin;
-        this.modelLogin = new ModelLogin();
+        this.modelLogin = new FacadeLogin();
         prepareButtons();
     }
 
@@ -24,12 +24,22 @@ public class ControllerLogin {
     }
     
     
-    
+    private boolean isAdmin(){
+        if (viewLogin.getUsername().equals("admin") &&
+                viewLogin.getPassword().equals("admin")){
+            return true;
+        }
+        return false;
+    }
    
     private void login() {
-        if (validateEmptyFields() && validCredentials()){
+        if (isAdmin()){
             viewLogin.clear();
             goCR();
+        }
+        if (validateEmptyFields() && validCredentials()){
+            viewLogin.clear();
+            goContacto();
         }
     }
     
@@ -38,7 +48,13 @@ public class ControllerLogin {
         MainController.showCR();
     }
     
+    private void goContacto(){
+        viewLogin.setVisible(false);
+        MainController.showContact();
+    }
+    
     private boolean  validCredentials(){
+        
         String errorMessage = modelLogin.validateLogin(
                 viewLogin.getUsername(), 
                 viewLogin.getPassword());
